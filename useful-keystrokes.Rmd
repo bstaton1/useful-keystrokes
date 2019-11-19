@@ -10,9 +10,8 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-library(kableExtra)
 library(knitr)
-library(magrittr)
+library(kableExtra)
 library(stringr)
 library(dplyr)
 
@@ -151,4 +150,4 @@ A complete list of shortcuts can be accessed within RStudio using <kbd>OPTION</k
 *  This list is by no means comprehensive, but is limited to my most-used shortcuts. I find the full list to be overwhelming, which is why I have created this abbreviated reference.
 *  Shortcuts labeled as a &#9733; under the **Gem** column are those that I personally find especially useful and are specific to my work in RStudio, beyond the basics. For example, the shortcut for "Undo" is among my most frequently used keystrokes, but it is basic in that many other programs use this same one.
 *  I am not a Mac user, so I have not tested them after looking them up. There are several I could not find; these are listed as <kbd>??</kbd> + <kbd>??</kbd> for now, and I will fill them in ASARP.
-*  If there is a highly useful shortcut you believe is missing from this list, please submit an *issue*, and I will consider adding it to this list. If you find an error here, please do the same.
+*  If there is a highly useful shortcut you believe is missing from this list, please submit an [issue](https://github.com/bstaton1/useful-keystrokes/issues){target="_blank"}, and I will consider adding it to this list. If you find an error here, please do the same.
