@@ -1,0 +1,154 @@
+---
+title: "Useful RStudio Keyboard Shortcuts"
+subtitle: "Commonly Used by B. Staton"
+date: "Last Updated `r format(Sys.Date(), '%m/%d/%Y')`"
+output: 
+  html_document:
+    theme: "cerulean"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+library(kableExtra)
+library(knitr)
+library(magrittr)
+library(stringr)
+library(dplyr)
+
+# global chunk options
+opts_chunk$set(echo = FALSE)
+
+# load in the font awesome icons
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+
+# create the my_kable function
+# creates a nice table depending on the specific operating system and keystroke group
+my_kable = function(OS, grp) {
+  tab %>%
+    filter(group == grp & os == OS) %>%
+    select(desc, keystroke, gem) %>%
+    kable("html", align = "llc", escape = F, col.names = c("Description", "Keystroke", 'Gem')) %>%
+    kable_styling(full_width = F, bootstrap_options = c("striped", "compressed"))
+}
+```
+
+```{r table-prep}
+# the raw input table
+tab = read.csv("table.csv", stringsAsFactors = F, na.strings = "")
+colnames(tab)[1] = "os"
+tab$gem[is.na(tab$gem)] = ""
+
+# format the necessary HTML codes
+tab[tab == "star" & !is.na(tab)] = "&#9733;"
+tab[tab == "down" & !is.na(tab)] = "&#8681;"
+tab[tab == "up" & !is.na(tab)] = "&#8679;"
+tab[tab == "right" & !is.na(tab)] = "&#8680;"
+tab[tab == "left" & !is.na(tab)] = "&#8678;"
+
+# format all monospaced text
+tab$desc %<>% 
+  str_replace("`", "<tt>") %>% 
+  str_replace("`", "</tt>")
+
+# function to insert the HTML code to indicate text should be represented as a key
+insert_kbd = function(k) {
+  ifelse(is.na(k), NA, paste0("<kbd>", k, "</kbd>"))
+}
+
+# insert the keys
+tab$k1 %<>% insert_kbd
+tab$k2 %<>% insert_kbd
+tab$k3 %<>% insert_kbd
+tab$k4 %<>% insert_kbd
+
+# insert the separators
+tab$keystroke = paste(tab$k1, tab$sep_12, tab$k2, sep = " ")
+tab$keystroke = ifelse(!is.na(tab$k3), paste(tab$keystroke, tab$sep_23, tab$k3, sep = " "), tab$keystroke)
+tab$keystroke = ifelse(!is.na(tab$k4), paste(tab$keystroke, tab$sep_34, tab$k4, sep = " "), tab$keystroke)
+```
+
+# {.tabset .tabset-fade .tabset-pills}
+
+## <i class="fa fa-windows"></i> {.tabset .tabset-fade .tabset-pills}
+
+A complete list of shortcuts can be accessed within RStudio using <kbd>ALT</kbd> + <kbd>SHIFT</kbd> + <kbd>K</kbd>, or [here](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts){target="_blank"}.
+
+### Execution
+
+`r my_kable("pc", "execution")`
+
+### Editing
+
+`r my_kable("pc", "editing")`
+
+### Selection
+
+`r my_kable("pc", "selection")`
+
+### Navigation
+
+`r my_kable("pc", "navigation")`
+
+### Files
+
+`r my_kable("pc", "files")`
+
+### Misc
+
+`r my_kable("pc", "misc")`
+
+### `{rmarkdown}`
+
+`r my_kable("pc", "rmd")`
+
+### `{devtools}`
+
+`r my_kable("pc", "devtools")`
+
+## <i class="fa fa-apple"></i> {.tabset .tabset-fade .tabset-pills}
+
+A complete list of shortcuts can be accessed within RStudio using <kbd>OPTION</kbd> + <kbd>SHIFT</kbd> + <kbd>K</kbd>, or [here](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts){target="_blank"}.
+
+### Execution
+
+`r my_kable("mac", "execution")`
+
+### Editing
+
+`r my_kable("mac", "editing")`
+
+### Selection
+
+`r my_kable("mac", "selection")`
+
+### Navigation
+
+`r my_kable("mac", "navigation")`
+
+### Files
+
+`r my_kable("mac", "files")`
+
+### Misc
+
+`r my_kable("mac", "misc")`
+
+### `{rmarkdown}`
+
+`r my_kable("mac", "rmd")`
+
+### `{devtools}`
+
+`r my_kable("mac", "devtools")`
+
+#
+
+---
+
+**NOTES**
+
+*  This list is by no means comprehensive, but is limited to my most-used shortcuts. I find the full list to be overwhelming, which is why I have created this abbreviated reference.
+*  Shortcuts labeled as a &#9733; under the **Gem** column are those that I personally find especially useful and are specific to my work in RStudio, beyond the basics. For example, the shortcut for "Undo" is among my most frequently used keystrokes, but it is basic in that many other programs use this same one.
+*  I am not a Mac user, so I have not tested them after looking them up. There are several I could not find; these are listed as <kbd>??</kbd> + <kbd>??</kbd> for now, and I will fill them in ASARP.
+*  If there is a highly useful shortcut you believe is missing from this list, please submit an *issue*, and I will consider adding it to this list. If you find an error here, please do the same.
