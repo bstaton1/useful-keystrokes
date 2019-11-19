@@ -1,31 +1,61 @@
-﻿group,desc,k1,sep_12,k2,sep_23,k3,sep_34,k4,gem
-execution,Run line or selection,CTRL,+,ENTER,,,,,star
-execution,Run line (without moving cursor),ALT,+,ENTER,,,,,
-execution,Run from beginning to line,CTRL,+,ALT,+,B,,,
-execution,Run from line to end,CTRL,+,ALT,+,E,,,
-editing,Copy selection,CTRL,+,C,,,,,
-editing,Cut selection,CTRL,+,X,,,,,
-editing,Paste selection,CTRL,+,V,,,,,
-editing,Undo,CTRL,+,Z,,,,,
-editing,Comment selected lines,CTRL,+,SHIFT,+,C,,,star
-editing,Copy selected lines,ALT,+,SHIFT,+,down,/,up,star
-editing,Move selected lines,ALT,+,down,/,up,,,star
-editing,Find,CTRL,+,F,,,,,
-selection,Select all code,CTRL,+,A,,,,,
-selection,Select characters,SHIFT,+,right,/,left,,,
-selection,Select line,SHIFT,+,down,/,up,,,
-selection,Select word,CTRL,+,SHIFT,+,right,/,left,
-navigation,Move cursor between words,CTRL,+,right,/,left,,,
-navigation,Move cursor to end or start of line,ALT,+,right,/,left,,,
-navigation,Move cursor to script editor pane,CTRL,+,1,,,,,star
-navigation,Move cursor to console pane,CTRL,+,2,,,,,star
-misc,Zoom In,CTRL,+,SHIFT,+,+,,,
-misc,Zoom Out,CTRL,+,-,,,,,
-files,Save file,CTRL,+,S,,,,,
-files,Open file,CTRL,+,O,,,,,
-files,New .R script,CTRL,+,SHIFT,+,N,,,star
-rmd,Insert an empty code chunk,CTRL,+,ALT,+,I,,,star
-rmd,knit a `{rmarkdown}` document,CTRL,+,SHIFT,+,K,,,star
-rmd,Build a `{bookdown}` document,CTRL,+,SHIFT,+,B,,,
-devtools,Create package documentation,CTRL,+,SHIFT,+,D,,,
-devtools,Build a package,CTRL,+,SHIFT,+,B,,,
+﻿os,group,desc,k1,sep_12,k2,sep_23,k3,sep_34,k4,gem
+pc,execution,Run line or selection,CTRL,+,ENTER,,,,,star
+pc,execution,Run line (without moving cursor),ALT,+,ENTER,,,,,
+pc,execution,Run from beginning to line,CTRL,+,ALT,+,B,,,
+pc,execution,Run from line to end,CTRL,+,ALT,+,E,,,
+pc,editing,Copy selection,CTRL,+,C,,,,,
+pc,editing,Cut selection,CTRL,+,X,,,,,
+pc,editing,Paste selection,CTRL,+,V,,,,,
+pc,editing,Undo,CTRL,+,Z,,,,,
+pc,editing,Comment selected lines,CTRL,+,SHIFT,+,C,,,star
+pc,editing,Copy selected lines,ALT,+,SHIFT,+,down,/,up,star
+pc,editing,Move selected lines,ALT,+,down,/,up,,,star
+pc,editing,Find,CTRL,+,F,,,,,
+pc,selection,Select all code,CTRL,+,A,,,,,
+pc,selection,Select characters,SHIFT,+,right,/,left,,,
+pc,selection,Select line,SHIFT,+,down,/,up,,,
+pc,selection,Select word,CTRL,+,SHIFT,+,right,/,left,
+pc,navigation,Move cursor between words,CTRL,+,right,/,left,,,
+pc,navigation,Move cursor to end or start of line,ALT,+,right,/,left,,,
+pc,navigation,Move cursor to script editor pane,CTRL,+,1,,,,,star
+pc,navigation,Move cursor to console pane,CTRL,+,2,,,,,star
+pc,misc,Zoom In,CTRL,+,SHIFT,+,+,,,
+pc,misc,Zoom Out,CTRL,+,-,,,,,
+pc,files,Save file,CTRL,+,S,,,,,
+pc,files,Open file,CTRL,+,O,,,,,
+pc,files,New .R script,CTRL,+,SHIFT,+,N,,,star
+pc,rmd,Insert an empty code chunk,CTRL,+,ALT,+,I,,,star
+pc,rmd,knit a `{rmarkdown}` document,CTRL,+,SHIFT,+,K,,,star
+pc,rmd,Build a `{bookdown}` document,CTRL,+,SHIFT,+,B,,,
+pc,devtools,Create package documentation,CTRL,+,SHIFT,+,D,,,
+pc,devtools,Build a package,CTRL,+,SHIFT,+,B,,,
+mac,execution,Run line or selection,CMD,+,ENTER,,,,,star
+mac,execution,Run line (without moving cursor),OPTION,+,ENTER,,,,,
+mac,execution,Run from beginning to line,CMD,+,OPTION,+,B,,,
+mac,execution,Run from line to end,CMD,+,OPTION,+,E,,,
+mac,editing,Copy selection,CMD,+,C,,,,,
+mac,editing,Cut selection,CMD,+,X,,,,,
+mac,editing,Paste selection,CMD,+,V,,,,,
+mac,editing,Undo,CMD,+,Z,,,,,
+mac,editing,Comment selected lines,CMD,+,SHIFT,+,C,,,star
+mac,editing,Copy selected lines,CMD,+,OPTION,+,up,/,down,star
+mac,editing,Move selected lines,OPTION,+,up,/,down,,,star
+mac,editing,Find,CMD,+,F,,,,,
+mac,selection,Select all code,CMD,+,A,,,,,
+mac,selection,Select characters,SHIFT,+,right,/,left,,,
+mac,selection,Select line,SHIFT,+,up,/,down,,,
+mac,selection,Select word,OPTION,+,SHIFT,+,right,/,left,
+mac,navigation,Move cursor between words,??,+,??,,,,,
+mac,navigation,Move cursor to end or start of line,??,+,??,,,,,
+mac,navigation,Move cursor to script editor pane,CTRL,+,1,,,,,star
+mac,navigation,Move cursor to console pane,CTRL,+,2,,,,,star
+mac,misc,Zoom In,??,+,??,,,,,
+mac,misc,Zoom Out,??,+,??,,,,,
+mac,files,Save file,CMD,+,S,,,,,
+mac,files,Open file,CMD,+,O,,,,,
+mac,files,New .R script,CMD,+,SHIFT,+,N,,,star
+mac,rmd,Insert an empty code chunk,CMD,+,SHIFT,+,I,,,star
+mac,rmd,knit a `{rmarkdown}` document,CMD,+,SHIFT,+,K,,,star
+mac,rmd,Build a `{bookdown}` document,CMD,+,SHIFT,+,B,,,
+mac,devtools,Create package documentation,CMD,+,SHIFT,+,D,,,
+mac,devtools,Build a package,CMD,+,SHIFT,+,B,,,
