@@ -46,12 +46,12 @@ mac,selection,Select all code,CMD,+,A,,,,,
 mac,selection,Select characters,SHIFT,+,right,/,left,,,
 mac,selection,Select line,SHIFT,+,up,/,down,,,
 mac,selection,Select word,OPTION,+,SHIFT,+,right,/,left,
-mac,navigation,Move cursor between words,??,+,??,,,,,
-mac,navigation,Move cursor to end or start of line,??,+,??,,,,,
+mac,navigation,Move cursor between words,OPTION,+,right,/,left,,,
+mac,navigation,Move cursor to end or start of line,CMD,+,right,/,left,,,
 mac,navigation,Move cursor to script editor pane,CTRL,+,1,,,,,star
 mac,navigation,Move cursor to console pane,CTRL,+,2,,,,,star
-mac,misc,Zoom In,??,+,??,,,,,
-mac,misc,Zoom Out,??,+,??,,,,,
+mac,misc,Zoom In,CMD,+,=,,,,,
+mac,misc,Zoom Out,CMD,+,-,,,,,
 mac,files,Save file,CMD,+,S,,,,,
 mac,files,Open file,CMD,+,O,,,,,
 mac,files,New .R script,CMD,+,SHIFT,+,N,,,star
