@@ -29,6 +29,7 @@ pc,rmd,knit a `{rmarkdown}` document,CTRL,+,SHIFT,+,K,,,star
 pc,rmd,Build a `{bookdown}` document,CTRL,+,SHIFT,+,B,,,
 pc,devtools,Create package documentation,CTRL,+,SHIFT,+,D,,,star
 pc,devtools,Build a package,CTRL,+,SHIFT,+,B,,,star
+pc,devtools,Check a package,CTRL,+,SHIFT,+,E,,,
 mac,execution,Run line or selection,CMD,+,ENTER,,,,,star
 mac,execution,Run line (without moving cursor),OPTION,+,ENTER,,,,,
 mac,execution,Run from beginning to line,CMD,+,OPTION,+,B,,,star
@@ -59,3 +60,4 @@ mac,rmd,knit a `{rmarkdown}` document,CMD,+,SHIFT,+,K,,,star
 mac,rmd,Build a `{bookdown}` document,CMD,+,SHIFT,+,B,,,
 mac,devtools,Create package documentation,CMD,+,SHIFT,+,D,,,star
 mac,devtools,Build a package,CMD,+,SHIFT,+,B,,,star
+mac,devtools,Check a package,CMD,+,SHIFT,+,E,,,
