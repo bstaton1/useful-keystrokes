@@ -14,6 +14,7 @@ library(knitr)
 library(kableExtra)
 library(stringr)
 library(dplyr)
+library(magrittr)
 
 # global chunk options
 opts_chunk$set(echo = FALSE)
@@ -44,11 +45,6 @@ tab[tab == "down" & !is.na(tab)] = "&#8681;"
 tab[tab == "up" & !is.na(tab)] = "&#8679;"
 tab[tab == "right" & !is.na(tab)] = "&#8680;"
 tab[tab == "left" & !is.na(tab)] = "&#8678;"
-
-# format all monospaced text
-tab$desc %<>% 
-  str_replace("`", "<tt>") %>% 
-  str_replace("`", "</tt>")
 
 # function to insert the HTML code to indicate text should be represented as a key
 insert_kbd = function(k) {
@@ -97,11 +93,11 @@ A complete list of shortcuts can be accessed within RStudio using <kbd>ALT</kbd>
 
 `r my_kable("pc", "misc")`
 
-### `{rmarkdown}`
+### 'rmarkdown'
 
 `r my_kable("pc", "rmd")`
 
-### `{devtools}`
+### 'devtools'
 
 `r my_kable("pc", "devtools")`
 
@@ -133,11 +129,11 @@ A complete list of shortcuts can be accessed within RStudio using <kbd>OPTION</k
 
 `r my_kable("mac", "misc")`
 
-### `{rmarkdown}`
+### 'rmarkdown'
 
 `r my_kable("mac", "rmd")`
 
-### `{devtools}`
+### 'devtools'
 
 `r my_kable("mac", "devtools")`
 

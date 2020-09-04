@@ -25,8 +25,8 @@ pc,files,Save file,CTRL,+,S,,,,,
 pc,files,Open file,CTRL,+,O,,,,,
 pc,files,New .R script,CTRL,+,SHIFT,+,N,,,star
 pc,rmd,Insert an empty code chunk,CTRL,+,ALT,+,I,,,star
-pc,rmd,knit a `{rmarkdown}` document,CTRL,+,SHIFT,+,K,,,star
-pc,rmd,Build a `{bookdown}` document,CTRL,+,SHIFT,+,B,,,
+pc,rmd,knit a 'rmarkdown' document,CTRL,+,SHIFT,+,K,,,star
+pc,rmd,Build a 'bookdown' document,CTRL,+,SHIFT,+,B,,,
 pc,devtools,Create package documentation,CTRL,+,SHIFT,+,D,,,star
 pc,devtools,Build a package,CTRL,+,SHIFT,+,B,,,star
 pc,devtools,Check a package,CTRL,+,SHIFT,+,E,,,
@@ -56,8 +56,8 @@ mac,files,Save file,CMD,+,S,,,,,
 mac,files,Open file,CMD,+,O,,,,,
 mac,files,New .R script,CMD,+,SHIFT,+,N,,,star
 mac,rmd,Insert an empty code chunk,CMD,+,SHIFT,+,I,,,star
-mac,rmd,knit a `{rmarkdown}` document,CMD,+,SHIFT,+,K,,,star
-mac,rmd,Build a `{bookdown}` document,CMD,+,SHIFT,+,B,,,
+mac,rmd,knit a 'rmarkdown' document,CMD,+,SHIFT,+,K,,,star
+mac,rmd,Build a 'bookdown' document,CMD,+,SHIFT,+,B,,,
 mac,devtools,Create package documentation,CMD,+,SHIFT,+,D,,,star
 mac,devtools,Build a package,CMD,+,SHIFT,+,B,,,star
 mac,devtools,Check a package,CMD,+,SHIFT,+,E,,,
