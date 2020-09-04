@@ -1,6 +1,5 @@
 ---
 title: "Useful RStudio Keyboard Shortcuts"
-subtitle: "Commonly Used by B. Staton"
 date: "Last Updated `r format(Sys.Date(), '%m/%d/%Y')`"
 output: 
   html_document:
@@ -14,6 +13,7 @@ library(knitr)
 library(kableExtra)
 library(stringr)
 library(dplyr)
+library(magrittr)
 
 # global chunk options
 opts_chunk$set(echo = FALSE)
@@ -45,11 +45,6 @@ tab[tab == "up" & !is.na(tab)] = "&#8679;"
 tab[tab == "right" & !is.na(tab)] = "&#8680;"
 tab[tab == "left" & !is.na(tab)] = "&#8678;"
 
-# format all monospaced text
-tab$desc %<>% 
-  str_replace("`", "<tt>") %>% 
-  str_replace("`", "</tt>")
-
 # function to insert the HTML code to indicate text should be represented as a key
 insert_kbd = function(k) {
   ifelse(is.na(k), NA, paste0("<kbd>", k, "</kbd>"))
@@ -66,6 +61,12 @@ tab$keystroke = paste(tab$k1, tab$sep_12, tab$k2, sep = " ")
 tab$keystroke = ifelse(!is.na(tab$k3), paste(tab$keystroke, tab$sep_23, tab$k3, sep = " "), tab$keystroke)
 tab$keystroke = ifelse(!is.na(tab$k4), paste(tab$keystroke, tab$sep_34, tab$k4, sep = " "), tab$keystroke)
 ```
+
+When coding along with others in RStudio, the inevitable "woah, how did you do that?!" occurs when commenting out multiple lines at once, copying multiple lines down at once, or moving lines around all without touching the mousepad.
+
+Because the complete list is totally overwhelming, I've created this short list of shortcuts I use most often and that tend to catch people's attention (particularly the "gems" under "editing" and "navigation").
+
+You can view the source code to build this document on [<i class="fa fa-github"></i> GitHub](https://github.com/bstaton1/useful-keystrokes){target="_blank"}.
 
 # {.tabset .tabset-fade .tabset-pills}
 
@@ -97,11 +98,11 @@ A complete list of shortcuts can be accessed within RStudio using <kbd>ALT</kbd>
 
 `r my_kable("pc", "misc")`
 
-### `{rmarkdown}`
+### 'rmarkdown'
 
 `r my_kable("pc", "rmd")`
 
-### `{devtools}`
+### 'devtools'
 
 `r my_kable("pc", "devtools")`
 
@@ -133,11 +134,11 @@ A complete list of shortcuts can be accessed within RStudio using <kbd>OPTION</k
 
 `r my_kable("mac", "misc")`
 
-### `{rmarkdown}`
+### 'rmarkdown'
 
 `r my_kable("mac", "rmd")`
 
-### `{devtools}`
+### 'devtools'
 
 `r my_kable("mac", "devtools")`
 
@@ -147,7 +148,7 @@ A complete list of shortcuts can be accessed within RStudio using <kbd>OPTION</k
 
 **NOTES**
 
-*  This list is by no means comprehensive, but is limited to my most-used shortcuts. I find the full list to be overwhelming, which is why I have created this abbreviated reference.
-*  Shortcuts labeled as a &#9733; under the **Gem** column are those that I personally find especially useful and are specific to my work in RStudio, beyond the basics. For example, the shortcut for "Undo" is among my most frequently used keystrokes, but it is basic in that many other programs use this same one.
-*  I am not a Mac user, so I have not tested them after looking them up. There are several I could not find; these are listed as <kbd>??</kbd> + <kbd>??</kbd> for now, and I will fill them in ASARP.
-*  If there is a highly useful shortcut you believe is missing from this list, please submit an [issue](https://github.com/bstaton1/useful-keystrokes/issues){target="_blank"}, and I will consider adding it to this list. If you find an error here, please do the same.
+*  This list is by no means comprehensive.
+*  Shortcuts labeled as &#9733; under the **Gem** column are those that I personally find especially useful and are specific to my work in RStudio, beyond the basics. For example, the shortcut for "Undo" is among my most frequently used keystrokes, but it is basic in that many other programs use this same one.
+*  If there is a highly useful shortcut you believe is missing from this list, please submit an [issue](https://github.com/bstaton1/useful-keystrokes/issues){target="_blank"}, and I will consider adding it. 
+*  If you find an error here, please do the same.
